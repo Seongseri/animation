@@ -1,0 +1,52 @@
+div {
+    width: 300px;
+    height: 100px;
+    border: 1px solid gray;
+    display: flex;
+    justify-content: center;
+}
+
+div {
+    transition: all 1s ease-in-out;
+}
+
+div:hover {
+    background-color: cornsilk;
+}
+
+div:hover img {
+    transform: scale(3) rotateX(360deg);
+}
+
+@keyframes moving-logo {
+    0% {
+        transform: scale(0.2);
+    }
+    25% {
+        transform: scale(3);
+    }
+    40%{
+        opacity: 0;
+        transform: scale(3);
+    }
+    45%{
+        opacity: 1;
+        transform: scale(3);
+    }
+    50%{
+        opacity: 0;
+        transform: scale(3);
+    }
+    55%{
+        opacity: 1;
+        transform: scale(3);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+img {
+    width: 100px;
+    animation: moving-logo 3s infinite;
+}
